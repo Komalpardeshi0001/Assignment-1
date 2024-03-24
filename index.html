@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <tital>Assignment</tital>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.dropdown-submenu {
+  position: relative;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 10%;
+  left: 100%;
+  margin-top: -1px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.btn-shine {
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    color: #fff;
+    background: #054450;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+.btn-shine:hover
+{
+    background: #1e7485;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+   
+<div class="container">
+     <div class="row" style="margin-top: 50px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">                                               
+            <div class="dropdown">
+                <button class="btn btn-shine dropdown-toggle" type="button" data-toggle="dropdown">Research
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Internal</a></li>
+                <li class="dropdown-submenu">
+                    <a class="test" tabindex="-1" href="#">External <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">B2C</a></li>
+                    <li class="dropdown-submenu">
+                        <a class="test" href="#">B2C <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="#">Online</a></li>
+                        <li><a href="#">Interview</a></li>
+                        <li><a href="#">Public Data</a></li>
+                        <li><a href="#">Health</a></li>
+                        </ul>
+                    </li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2">                                               
+            <div class="dropdown">
+                <button class="btn btn-shine dropdown-toggle" type="button" data-toggle="dropdown">Planning
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">PRD</a></li>
+                <li><a tabindex="-1" href="#">Specs</a></li>
+                
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2">                                               
+            <div class="dropdown">
+                <button class="btn btn-shine dropdown-toggle" type="button" data-toggle="dropdown">Design
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Hardware</a></li>
+                <li><a tabindex="-1" href="#">Software</a></li>
+                
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2">                                               
+            <div class="dropdown">
+                <button class="btn btn-shine dropdown-toggle" type="button" data-toggle="dropdown">Manufacturing
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Material</a></li>
+                <li><a tabindex="-1" href="#">Production</a></li>
+                
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2">                                               
+            <div class="dropdown">
+                <button class="btn btn-shine dropdown-toggle" type="button" data-toggle="dropdown">Sale/Marketing
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                <li><a tabindex="-1" href="#">Online</a></li>
+                <li><a tabindex="-1" href="#">Dealership</a></li>
+                
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+     </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+</body>
+</html>
